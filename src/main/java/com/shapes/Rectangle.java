@@ -1,4 +1,4 @@
-package com.shapes.rectangle;
+package com.shapes;
 
 public class Rectangle {
 

@@ -1,6 +1,6 @@
-package com.shape.rectangle;
+package com.shapes;
 
-import com.shapes.rectangle.Rectangle;
+import com.shapes.Rectangle;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
