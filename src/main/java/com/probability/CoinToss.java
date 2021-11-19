@@ -17,16 +17,15 @@ public class CoinToss {
         return probabilityOfTwoEventsOccuringTogether;
     }
 
-    /*public CoinToss calculateProbabilityNotOccuring(CoinToss chanceOfEvent) {
-        CoinToss probabilityOfEventNotOccuring= new CoinToss(1- chanceOfEvent.probabilityOutcome);
+    public CoinToss calculateProbabilityNotOccuring(CoinToss chanceOfEvent) {
+        CoinToss probabilityOfEventNotOccuring= new CoinToss(this.probabilityOutcome- chanceOfEvent.probabilityOutcome);
         return  probabilityOfEventNotOccuring;
-    }*/
+    }
 
-    public CoinToss calculateProbabilityOfEitherEventsOccuring(CoinToss event2Value) {
+    public CoinToss calculateProbabilityOfEitherOfEventsOccuring(CoinToss event2Value) {
         CoinToss probabilityOfEitherOfTwoEventsOccuring= new CoinToss(this.probabilityOutcome +event2Value.probabilityOutcome-(this.probabilityOutcome*event2Value.probabilityOutcome));
         return probabilityOfEitherOfTwoEventsOccuring;
     }
-
 
 
     @Override

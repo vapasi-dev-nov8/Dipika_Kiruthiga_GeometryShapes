@@ -32,14 +32,15 @@ public class CoinTossTest {
         assertTrue(expectedProbability.equals(result));
     }
 
-    /*@Test
+    @Test
     // P(A') = 1 - p(A)
     void probabilityOfEventsNotOcurring(){
     CoinToss probabilityOfOneEvent = new CoinToss(0.5);
+    CoinToss probabilityOfEventnotOccuring = new CoinToss(1);
     CoinToss expectedProbability = new CoinToss(0.5);
-    //CoinToss result= 1-(calculateProbabilityNotOccuring(probabilityOfOneEvent));
-    assertEquals(expectedProbability,calculateProbabilityNotOccuring(probabilityOfOneEvent)));
-    }*/
+    CoinToss result= probabilityOfEventnotOccuring.calculateProbabilityNotOccuring(probabilityOfOneEvent);
+    assertEquals(expectedProbability,result);
+    }
 
     @Test
         //P(A or B) = P(A) + P(B) - P(A and B)
@@ -47,7 +48,7 @@ public class CoinTossTest {
         CoinToss probabilityOfEvent1 = new CoinToss(0.5);
         CoinToss probabilityOfEvent2 = new CoinToss(0.5);
         CoinToss expectedProbability = new CoinToss(0.75);
-        CoinToss result=probabilityOfEvent1.calculateProbabilityOfEitherEventsOccuring(probabilityOfEvent2);
+        CoinToss result=probabilityOfEvent1.calculateProbabilityOfEitherOfEventsOccuring(probabilityOfEvent2);
         assertTrue(expectedProbability.equals(result));
     }
 
